@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: 7267577c0ab86f846a90b95900173199
+guid: 2a28dfdc0d7154549a783eab07316730
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8438868433904372088
-    second: Chicken_trail-Sheet_0
+      213: -4480769303698676222
+    second: ball_animation_0
   - first:
-      213: -3502696698331333173
-    second: Chicken_trail-Sheet_1
+      213: -2316867406158245288
+    second: ball_animation_1
   - first:
-      213: -3398850737949586059
-    second: Chicken_trail-Sheet_2
+      213: -8734962478821776923
+    second: ball_animation_2
   - first:
-      213: -1268078904313820768
-    second: Chicken_trail-Sheet_3
+      213: -7575112950015062726
+    second: ball_animation_3
+  - first:
+      213: -4751811933418218592
+    second: ball_animation_4
+  - first:
+      213: 7885236456413056007
+    second: ball_animation_5
+  - first:
+      213: 4211350366852010049
+    second: ball_animation_6
+  - first:
+      213: -1772602826450729950
+    second: ball_animation_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -44,7 +56,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -54,7 +66,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 0
+  spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -100,7 +112,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
+    buildTarget: Windows Store Apps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -127,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chicken_trail-Sheet_0
+      name: ball_animation_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 67
-        width: 30
-        height: 30
+        x: 1
+        y: 1
+        width: 43
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 879802d2122ec1570800000000000000
-      internalID: 8438868433904372088
+      spriteID: 206e094fe0c11d1c0800000000000000
+      internalID: -4480769303698676222
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chicken_trail-Sheet_1
+      name: ball_animation_1
       rect:
         serializedVersion: 2
-        x: 73
-        y: 63
-        width: 19
-        height: 46
+        x: 46
+        y: 1
+        width: 43
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcdf60439ebe36fc0800000000000000
-      internalID: -3502696698331333173
+      spriteID: 852d1409e55d8dfd0800000000000000
+      internalID: -2316867406158245288
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chicken_trail-Sheet_2
+      name: ball_animation_2
       rect:
         serializedVersion: 2
-        x: 26
-        y: 4
-        width: 19
-        height: 46
+        x: 91
+        y: 1
+        width: 43
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57dc0fff24bd4d0d0800000000000000
-      internalID: -3398850737949586059
+      spriteID: 5e16673c7ed27c680800000000000000
+      internalID: -8734962478821776923
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chicken_trail-Sheet_3
+      name: ball_animation_3
       rect:
         serializedVersion: 2
-        x: 54
-        y: 21
-        width: 47
-        height: 13
+        x: 136
+        y: 1
+        width: 43
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,8 +216,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a9453184f0e66ee0800000000000000
-      internalID: -1268078904313820768
+      spriteID: a3d04e818eacfd690800000000000000
+      internalID: -7575112950015062726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ball_animation_4
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 1
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ab1525093c2e0eb0800000000000000
+      internalID: -4751811933418218592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ball_animation_5
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70cc57287ccfd6d60800000000000000
+      internalID: 7885236456413056007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ball_animation_6
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 1
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 140dce098d8b17a30800000000000000
+      internalID: 4211350366852010049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ball_animation_7
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 1
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2240d89fe137667e0800000000000000
+      internalID: -1772602826450729950
       vertices: []
       indices: 
       edges: []
