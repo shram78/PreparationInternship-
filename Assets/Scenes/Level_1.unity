@@ -305,7 +305,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0990ec4ad8b49a9458f313d4473eb49a, type: 3}
-  m_Color: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+  m_Color: {r: 0.41037738, g: 0.4977592, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -614,11 +614,11 @@ MonoBehaviour:
   _container: {fileID: 1767912301}
   _capacity: 5
   _obstaclePrefab:
-  - {fileID: 6327775702958356592, guid: b5916b3696cb04040baa4e04fb061e80, type: 3}
+  - {fileID: 2963520423749872214, guid: bf71b802bb0f25349b9ee935857097f3, type: 3}
   - {fileID: 581206751918637681, guid: 6cb7761c4b5322e4092f03f6877b92af, type: 3}
+  - {fileID: 6327775702958356592, guid: b5916b3696cb04040baa4e04fb061e80, type: 3}
   - {fileID: 7757665649162826487, guid: e9d434f2b5dd2504d865046bace2040e, type: 3}
   - {fileID: 2963520423749872214, guid: 4e55b69c012a5d54d98a130b5d8af6b2, type: 3}
-  - {fileID: 6327775702958356592, guid: b5916b3696cb04040baa4e04fb061e80, type: 3}
   _previousObstacle: {fileID: 1673780712}
   _spawnPoint: {fileID: 1791242483}
 --- !u!4 &628875983
@@ -629,7 +629,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628875981}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.8, y: -5.31, z: 0}
+  m_LocalPosition: {x: 3.8, y: -4.093, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1767912302}
