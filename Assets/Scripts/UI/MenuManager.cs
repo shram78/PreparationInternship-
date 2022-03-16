@@ -8,11 +8,9 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private AudioSource _buttonClickSound;
     [SerializeField] private Button _openStoreButton;
 
-    private bool _isSetNewHighScore = false;
-
     private void OnBackMainMenuButton()
     {
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
         MainMenu.Load();
     }
 }

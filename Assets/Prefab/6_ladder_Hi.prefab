@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8686585445385855131}
   - component: {fileID: 5356584321556509880}
   - component: {fileID: 4667166560404693625}
-  - component: {fileID: 3884324953167445575}
   - component: {fileID: 7623514694104686163}
+  - component: {fileID: 2429175793954631288}
   m_Layer: 6
   m_Name: 6_ladder_Hi
   m_TagString: Untagged
@@ -111,18 +111,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 5.8}
   m_EdgeRadius: 0
---- !u!114 &3884324953167445575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7757665649162826487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccc20790e32b60a48863b54691e10c6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &7623514694104686163
 Rigidbody2D:
   serializedVersion: 4
@@ -144,3 +132,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2429175793954631288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7757665649162826487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 424f1001d547bcf4ea5b9f2c6ecaa8df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

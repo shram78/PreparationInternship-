@@ -46,7 +46,6 @@ public class MainMenuManager : MonoBehaviour
         while (_buttonClickSound.isPlaying)
             yield return null;
 
-        Time.timeScale = 0;
         Level_1.Load();
     }
 }

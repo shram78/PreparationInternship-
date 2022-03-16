@@ -7,7 +7,7 @@ public class Spawner : ObjectsPool
     [SerializeField] private Transform _spawnPoint;
 
     private float _minDdistanceBetweenObstacles = 1.5f;
-    private float _maxDistanceBetweenObstacles = 3.5f;
+    private float _maxDistanceBetweenObstacles = 13.5f;
     private float _distanceBetweenObstacles;
     private float _previousObstacleWidth;
     private float _currentObstacleWidth;
