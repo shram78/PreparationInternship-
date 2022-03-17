@@ -1,38 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(AudioSource))]
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private AudioSource _dieSound;
+    [SerializeField] private AudioSource _coinKeepSound;
 
-    private Rigidbody2D _rigidbody2D;
+    public event UnityAction <int> ScoreChanged;
 
-    public event UnityAction BeforeDie;
-    public event UnityAction GameOver;
+    public int _score;
 
-    private void Start()
+    public void AddScore()
     {
-        _rigidbody2D = GetComponent<Rigidbody2D>();
-    }
+        _coinKeepSound.Play(); 
 
-    public void Die()
-    {
-        BeforeDie?.Invoke();
-        StartCoroutine(Death());
-    }
+        _score++;
 
-    private IEnumerator Death()
-    {
-        _dieSound.Play();
-
-        yield return new WaitWhile(() =>_dieSound.isPlaying);
-
-        GameOver?.Invoke();
-
-        gameObject.SetActive(false);
+        ScoreChanged?.Invoke(_score);
     }
 }

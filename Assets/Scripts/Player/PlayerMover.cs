@@ -1,9 +1,8 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(AudioSource))]
+[RequireComponent(typeof(Animator))]
 
 public class PlayerMover : MonoBehaviour
 {
@@ -11,15 +10,12 @@ public class PlayerMover : MonoBehaviour
     [SerializeField] private LayerMask _groundLayer;
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpForce;
-   // [SerializeField] private float _inertionX;
     [SerializeField] private AudioSource _jumpSound;
-    [SerializeField] private Player _player;
-    [SerializeField] private ParticleSystem _playerDie;
 
     private Rigidbody2D _rigidbody2D;
-    private bool _isGrounded;
     private Animator _animator;
-    private const string IsJumping = "IsJumping";
+    private bool _isGrounded;
+    private const string _isMoving = "IsMoving";
 
     private void Start()
     {
@@ -30,29 +26,30 @@ public class PlayerMover : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Move1();
         _isGrounded = Physics2D.OverlapCircle(_groundChecker.position, 0.1f, _groundLayer);
 
-        _animator.SetBool(IsJumping, false);
+        PlayMoveAnimation();
 
-            if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
-                //Move1();
-                Jump1();
+        Move();
 
-        //    if (_isGrounded)
-          //      Jump1();
+        if (Input.GetKey(KeyCode.Space) && _isGrounded)
+            Jump();
     }
 
-    private void Move1()
+    private void PlayMoveAnimation()
     {
-        _animator.SetBool(IsJumping, true);
-
-        transform.Translate(Vector2.right * _speed * Time.deltaTime);
-
-      //  _rigidbody2D.AddForce(new Vector2(_inertionX, 0) * Time.deltaTime, ForceMode2D.Force);
+        if (_rigidbody2D.velocity.x > 0)
+            _animator.SetBool(_isMoving, true);
+        else
+            _animator.SetBool(_isMoving, false);
     }
 
-    private void Jump1()
+    private void Move()
+    {
+        _rigidbody2D.velocity = new Vector2(_speed * Time.deltaTime, _rigidbody2D.velocity.y);
+    }
+
+    private void Jump()
     {
         _jumpSound.Play();
 
