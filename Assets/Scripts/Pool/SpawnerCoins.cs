@@ -6,7 +6,7 @@ public class SpawnerCoins : ObjectsPool
     [SerializeField] private Transform[] _spawnPoint;
     [SerializeField] private float _secondsBetweenSpawn;
 
-    private float _elapsedTime = 0;
+    //private float _elapsedTime = 0;
 
     private void Start()
     {
@@ -15,13 +15,13 @@ public class SpawnerCoins : ObjectsPool
 
     private void Update()
     {
-        _elapsedTime += Time.deltaTime;
+       // _elapsedTime += Time.deltaTime;
 
-        if (_elapsedTime >= _secondsBetweenSpawn)
+       // if (_elapsedTime >= _secondsBetweenSpawn)
         {
             if (TryGetObject(out GameObject coin))
             {
-                _elapsedTime = 0;
+          //      _elapsedTime = 0;
 
                 int spawnPointNumber = Random.Range(0, _spawnPoint.Length);
 
