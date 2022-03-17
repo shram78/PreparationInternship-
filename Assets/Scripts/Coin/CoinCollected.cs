@@ -9,15 +9,6 @@ public class CoinCollected : MonoBehaviour
         if (collision.gameObject.TryGetComponent(out Player player))
         {
             gameObject.SetActive(false);
-
-            Debug.Log("PLAYER");
-        }
-
-
-        if (collision.gameObject.TryGetComponent(out ObstacleKillZone destroyerObstacles))
-        {
-            gameObject.SetActive(false);
-            Debug.Log("Kill");
         }
     }
 }
