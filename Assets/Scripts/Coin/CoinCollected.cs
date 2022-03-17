@@ -6,7 +6,6 @@ public class CoinCollected : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out Player player))
         {
-
             player.AddScore();
 
             gameObject.SetActive(false);

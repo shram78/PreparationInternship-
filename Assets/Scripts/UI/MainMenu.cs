@@ -1,18 +1,15 @@
-using System.Collections;
 using IJunior.TypedScenes;
 using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Animator))]
 
-public class MainMenuManager : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
     [SerializeField] private Button _playButton;
     [SerializeField] private Button _exitButton;
     [SerializeField] private Button _backMainMenuButton;
-
     [SerializeField] private Button _creatorButton;
-    [SerializeField] private AudioSource _buttonClickSound;
     [SerializeField] private Button _iJuniorUrlButton;
 
     private Animator _animator;
@@ -22,7 +19,7 @@ public class MainMenuManager : MonoBehaviour
     {
         _playButton.onClick.AddListener(OnPlayButtonClick);
         _exitButton.onClick.AddListener(OnExitButtonClick);
-        _creatorButton.onClick.AddListener(OnCreatorButtomClick);
+        _creatorButton.onClick.AddListener(OnCreatorButtonClick);
         _backMainMenuButton.onClick.AddListener(OnBackMainMenuButton);
         _iJuniorUrlButton.onClick.AddListener(OnIJuniorButtonClick);
     }
@@ -36,19 +33,14 @@ public class MainMenuManager : MonoBehaviour
     {
         _playButton.onClick.RemoveListener(OnPlayButtonClick);
         _exitButton.onClick.RemoveListener(OnExitButtonClick);
-        _creatorButton.onClick.RemoveListener(OnCreatorButtomClick);
+        _creatorButton.onClick.RemoveListener(OnCreatorButtonClick);
         _backMainMenuButton.onClick.AddListener(OnBackMainMenuButton);
         _iJuniorUrlButton.onClick.RemoveListener(OnIJuniorButtonClick);
     }
 
-    private void OnBackMainMenuButton()
-    {
-        _animator.SetBool(_isButtonPress, false);
-    }
-
     private void OnPlayButtonClick()
     {
-        StartCoroutine(DelayStart());
+        Level_1.Load();
     }
 
     private void OnExitButtonClick()
@@ -56,23 +48,16 @@ public class MainMenuManager : MonoBehaviour
         Application.Quit();
     }
 
-    private void OnIJuniorButtonClick()
-    {
-        Application.OpenURL("https://ijunior.ru/");
-    }
-
-    private void OnCreatorButtomClick()
+    private void OnCreatorButtonClick()
     {
         _animator.SetBool(_isButtonPress, true);
     }
-
-    private IEnumerator DelayStart()
+    private void OnBackMainMenuButton()
     {
-        _buttonClickSound.Play();
-
-        while (_buttonClickSound.isPlaying)
-            yield return null;
-
-        Level_1.Load();
+        _animator.SetBool(_isButtonPress, false);
+    }
+    private void OnIJuniorButtonClick()
+    {
+        Application.OpenURL("https://ijunior.ru/");
     }
 }

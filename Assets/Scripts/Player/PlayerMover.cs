@@ -53,6 +53,6 @@ public class PlayerMover : MonoBehaviour
     {
         _jumpSound.Play();
 
-         _rigidbody2D.velocity = Vector2.up * _jumpForce * Time.deltaTime;
+        _rigidbody2D.velocity = Vector2.up * _jumpForce * Time.deltaTime;
     }
 }
