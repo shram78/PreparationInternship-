@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(AudioSource))]
 
@@ -6,7 +7,9 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private AudioSource _coinKeepSound;
 
-    private int _score;
+    public event UnityAction <int> ScoreChanged;
+
+    public int _score;
 
     public void AddScore()
     {
@@ -14,6 +17,6 @@ public class Player : MonoBehaviour
 
         _score++;
 
-        Debug.Log(_score);
+        ScoreChanged?.Invoke(_score);
     }
 }
